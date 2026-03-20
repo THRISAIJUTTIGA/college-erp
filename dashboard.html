@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div class="profile">
+      <img src="image.png"Profile">
+      <h3>Thri Sai Juttiga</h3>
+      <p>24pa1a05a2 | CSE</p>
+    </div>
+    <a href="dashboard.html" class="active">🏠 Dashboard</a>
+    <a href="attendance.html">📅 Attendance</a>
+    <a href="marks.html">📝 Marks</a>
+    <a href="notice.html">📢 Notice Board</a>
+    <a href="index.html">🚪 Logout</a>
+  </div>
+
+  <div class="main">
+
+    <div class="topbar">
+      <h1>Welcome, Thri Sai Juttiga! 👋</h1>
+      <div class="topbar-right">
+
+        <div class="notif-wrapper">
+          <button class="icon-btn" onclick="toggleNotif()">🔔 <span class="badge">3</span></button>
+          <div class="notif-dropdown hidden" id="notifBox">
+            <h4>Notifications</h4>
+            <div class="notif-item">📝 Exams start April 10th</div>
+            <div class="notif-item">🎉 Holiday on March 25th</div>
+            <div class="notif-item">📚 Submit assignments by March 30th</div>
+          </div>
+        </div>
+
+        <button class="icon-btn" onclick="toggleTheme()" id="themeBtn">🌙 Dark</button>
+
+        <select class="color-select" onchange="changeColor(this.value)">
+          <option value="#0f3460">🔵 Blue</option>
+          <option value="#6a0dad">🟣 Purple</option>
+          <option value="#c0392b">🔴 Red</option>
+          <option value="#27ae60">🟢 Green</option>
+        </select>
+
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card blue">
+        <h3>📅 Attendance</h3>
+        <h1>85%</h1>
+        <p>42/50 classes attended</p>
+      </div>
+      <div class="card green">
+        <h3>📝 Average Marks</h3>
+        <h1>78%</h1>
+        <p>Good Performance!</p>
+      </div>
+      <div class="card orange">
+        <h3>💰 Fee Status</h3>
+        <h1>Paid ✅</h1>
+        <p>Next due: June 2025</p>
+      </div>
+      <div class="card purple">
+        <h3>📢 Notices</h3>
+        <h1>3</h1>
+        <p>New announcements</p>
+      </div>
+    </div>
+
+    <div class="charts-row">
+      <div class="chart-box">
+        <h2>📊 Attendance Chart</h2>
+        <canvas id="attendanceChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>📝 Marks Chart</h2>
+        <canvas id="marksChart"></canvas>
+      </div>
+    </div>
+
+    <div class="notices">
+      <h2>📢 Recent Notices</h2>
+      <div class="notice-item">🔔 Exams start from April 10th</div>
+      <div class="notice-item">🔔 Holiday on March 25th</div>
+      <div class="notice-item">🔔 Submit assignments by March 30th</div>
+    </div>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html

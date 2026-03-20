@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College ERP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h1>🎓 College ERP</h1>
+      <p>Welcome! Please login to continue</p>
+
+      <div class="role-select">
+        <button class="role-btn active" onclick="selectRole('student')">👨‍🎓 Student</button>
+        <button class="role-btn" onclick="selectRole('teacher')">👨‍🏫 Teacher</button>
+      </div>
+
+      <input type="text" id="username" placeholder="Enter your ID" />
+      <input type="password" id="password" placeholder="Enter password" />
+      <button class="login-btn" onclick="login()">Login →</button>
+
+      <p id="error-msg"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

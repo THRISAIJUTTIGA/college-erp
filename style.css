@@ -1,0 +1,70 @@
+{ margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.login-box h1 { font-size: 28px; color: #1a1a2e; margin-bottom: 8px; }
+.login-box p { color: #888; margin-bottom: 25px; }
+
+.role-select { display: flex; gap: 10px; margin-bottom: 20px; }
+
+.role-btn {
+  flex: 1;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.role-btn.active { background: #0f3460; color: white; border-color: #0f3460; }
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus { border-color: #0f3460; }
+
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  background: #0f3460;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-btn:hover { background: #1a1a2e; }
+
+#error-msg { color: red; margin-top: 10px; font-size: 14px; }
